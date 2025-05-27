@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="The Fibonacci Sequence, in PHP" />
+  <meta name="description" content="The Fibonnaci Sequence, in PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Isaac Ip" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>The Fibonacci Sequence, in PHP</title>
+  <title>The Fibonnaci Sequence, in PHP</title>
 </head>
 
 <body>
@@ -22,32 +22,38 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">The Fibonacci Sequence, in PHP</span>
+        <span class="mdl-layout-title">The Fibonnaci Sequence, in PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
         <img src="./images/fibonacci.jpg" alt="Fibonacci" width="250" />
       </div>
-      <br />
-      <div class="page-content">How many values would you like to produce?
-      </div>
-      <div class="page-content-php">
-        <form action="answer.php" method="GET">
-          <br />
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="value-1" name="value-1">
-            <label class="mdl-textfield__label" for="value-1">Number of Values</label>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="right-image">
+          <img src="./images/multiplication.png" alt="Multiplication Table" width="250" />
+        </div>
+        <div class="page-content-php">
+          <div id="submit">
+            <?php
+            $numbers = $_GET["value-1"];
+            $value1 = 0;
+            $value2 = 1;
+            $sum = 0;
+
+            // process 
+            for ($i = 1; $i <= $numbers; $i++) {
+              echo $sum . ", ";
+              $sum = ($value1 + $value2);
+              $value1 = $value2;
+              $value2 = $sum;
+              $i = $i + 1;
+            }
+            ?>
           </div>
-          <br />
-          <br />
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="submit">
-            Calculate
-          </button>
-        </form>
-      </div>
-    </main>
+        </div>
+      </main>
   </div>
 </body>
 
