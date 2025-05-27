@@ -37,19 +37,15 @@
         <div class="page-content-php">
           <div id="submit">
             <?php
-            $numbers = $_GET["value-1"];
-            $value1 = 0;
-            $value2 = 1;
-            $sum = 0;
-
-            // process 
-            for ($i = 1; $i <= $numbers; $i++) {
-              echo $sum . ", ";
-              $sum = ($value1 + $value2);
-              $value1 = $value2;
-              $value2 = $sum;
-              $i = $i + 1;
-            }
+                $num1 = 0;
+                 $num2 = 1;
+  
+     	        for ( $i = 0; $i < $n; $i++ ) {
+              echo $num1 . ", ";
+              $num3 = $num1 + $num2;
+              $num1 = $num2;
+              $num2 = $num3;
+             }
             ?>
           </div>
         </div>
