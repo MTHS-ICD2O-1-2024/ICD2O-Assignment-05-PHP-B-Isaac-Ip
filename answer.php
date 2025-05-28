@@ -30,18 +30,15 @@
         <img src="./images/fibonacci.jpg" alt="Fibonacci" width="250" />
       </div>
       </header>
-      <main class="mdl-layout__content">
-        <div class="right-image">
-          <img src="./images/multiplication.png" alt="Multiplication Table" width="250" />
-        </div>
         <div class="page-content-php">
           <div id="submit">
             <?php
                 $num1 = 0;
-                 $num2 = 1;
+                $num2 = 1;
+                $n = $_GET(value-1);
   
      	        for ( $i = 0; $i < $n; $i++ ) {
-              echo $num1 . ", ";
+              echo "(" . $num1 . ") ";
               $num3 = $num1 + $num2;
               $num1 = $num2;
               $num2 = $num3;
