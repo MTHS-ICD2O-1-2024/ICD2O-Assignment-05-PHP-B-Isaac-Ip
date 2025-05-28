@@ -35,7 +35,7 @@
             <?php
                 $num1 = 0;
                 $num2 = 1;
-                $n = $_GET(value-1);
+                $n = $_GET["value-1"];
   
      	        for ( $i = 0; $i < $n; $i++ ) {
               echo "(" . $num1 . ") ";
